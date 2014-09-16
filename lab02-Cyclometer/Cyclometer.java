@@ -1,18 +1,4 @@
-//////////////////////////////////////////
-/*
-Deepankar Roy
-Lab 2
-09/05/14
-Cyclometer Java Program
-    Keep track of time elapsed in seconds
-    and number of rotations of the front wheel in that time
-    For two trips, given time and number of rotations,
-    Print:
-        a)number of minutes each trip
-        b)number of counts each trip
-        c)distance of each trip in miles
-        d)distance for the two trips combined
-*/
+
 
 //define class
 public class Cyclometer{
