@@ -25,7 +25,7 @@ public class TimePadding {
         System.out.print("Enter the time in seconds: ");
         int seconds = myScanner.nextInt();
         
-        int hours, minutes;
+        int hours, minutes, x;
         
         hours = (int) (seconds/60/60);
         seconds = seconds - (hours*60*60);
@@ -34,7 +34,26 @@ public class TimePadding {
         
         seconds = seconds - (minutes*60);
         
-        System.out.println("The time is " +hours+ ":" +minutes+ ":" +seconds);
+        x = 0;
+        if (minutes < 10) {
+            x = 1;
+        }
+        if (seconds < 10) {
+            x = 2;
+        }
+        if ((minutes < 10)&&(seconds < 10)) {
+            x = 3;
+        }
         
+        switch (x) {
+            case 1: System.out.println("The time is " +hours+ ":0" +minutes+ ":" +seconds);
+            break;
+            case 2: System.out.println("The time is " +hours+ ":" +minutes+ ":0" +seconds);
+            break;
+            case 3: System.out.println("The time is " +hours+ ":0" +minutes+ ":0" +seconds);
+            break;
+            default: System.out.println("The time is " +hours+ ":" +minutes+ ":" +seconds);
+            break;
+        }
     }
 }
